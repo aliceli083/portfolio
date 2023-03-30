@@ -43,6 +43,10 @@ main{
 padding: 20px
 }
 
+#work {
+    padding-top: 60px;
+}
+
 #about, #work, #contact {
     display: flex;
     flex-wrap: wrap;
@@ -61,46 +65,152 @@ padding: 20px
 #work p{
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid red;
     justify-content: space-between;
 
 }
 
 #jump {
-    width: 100%;
-    height: 50%;
-    border: 1px solid blue;
+    width: 80%;
+    height: 30%;
+    border: 10px solid lightgoldenrodyellow;
+    opacity: 100%;
+    transition: opacity 0.4s ease-in-out;
+}
+#jump:hover {
+opacity: 0.7;
+width: 83%;
+height: 33%;
+
 }
 .project {
     width: 45%;
     margin-top: 1%;
     height: 20%;
+    border: 10px solid lightgoldenrodyellow;
 }
 
+.project {
+    opacity: 100%;
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .project:hover {
+    opacity: 0.7;
+    width: 48%;
+    height: 23%;
+  }
+  
+  #contact ul {
+    display: inline-flex;
+  }
+  .Email {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
 
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 768px){
-    main{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+  .Phone:hover {
+    text-decoration: underline;
+  }
+  .Email:hover {
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 992px) {
+    header h1{
+      font-size: 36px;
     }
-article{
-    flex: 0 1 45%;
-    margin-top: 2%
- }
- h1{
-    flex: 0 1 100%;
- }
- #article-3{
-    flex: 0 1 100%;
- }
+    nav ul {
+        padding: 5px;
+    }
+    nav li {
+        display: block;
+        border-right: none;
+    }
+    nav li a {
+        padding: 0px 40px;
+    }
+    #about h2, #work h2, #contact h2 {
+        width: 100%;
+        border-right: none;
+        text-align: left;
+        padding-right: 0%;
+    }
+    #about p, #work p, #contact p {
+        width: 100%;
+        padding-left: 0%;
+    }
+    #jump {
+        width: 100%;
+        height: auto;
+    }
+    .project {
+        width: 100%;
+        margin-top: 1%;
+        height: auto;
+    }
 }
+  
+  @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+    nav li a {
+       padding:0px 30px;
+    }
+    #about h2, #work h2, #contact h2 {
+        font-size: 24px;
+    }
+    #about p, #work p, #contact p {
+        font-size: 18px;
+    }
+    .project {
+        width: 45%;
+    }
+    }
+  
+  
+
+  @media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 28px;
+      }
+      nav ul {
+        padding: 5px;
+      }
+    
+      nav li a {
+        padding: 0px 20px;
+        font-size: 16px;
+      }
+    
+      #about h2,
+      #work h2,
+      #contact h2 {
+        width: 100%;
+        padding-right: 0%;
+        border: none;
+        text-align: left;
+      }
+    
+      #about p,
+      #work p,
+      #contact p {
+        width: 100%;
+        padding-left: 0%;
+      }
+      #work p {
+        justify-content: center;
+      }
+    
+      #jump, .project {
+       border-width: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
